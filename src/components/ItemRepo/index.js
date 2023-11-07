@@ -12,8 +12,8 @@ function ItemRepo({repo, handleRemoveRepo}) {
     <ItemContainer onClick={handleRemove}>
         <h3>{repo.name}</h3>
         <p>{repo.full_name}</p>
-        <a href={repo.html_url} rel="noreferrer" target="_blank">Ver repositório</a><br />
-        <a href={handleRemove}  className="remover">Remover</a>
+        <button onClick={() => window.open(repo.html_url, '_blank')} className="ver-repo">Ver repositório</button><br />
+        <button onClick={handleRemove}  className="remover">Remover</button>
         <hr />
     </ItemContainer>
   )

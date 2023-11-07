@@ -15,7 +15,7 @@ function App() {
 
 
   const handleSearchRepo = async () => {
-
+    console.log('handleSearchRepo');
     const {data} = await api.get(`repos/${currentRepo}`)
 
     if(data.id){
@@ -39,7 +39,6 @@ function App() {
     const updatedRepos = repos.filter(repo => repo.id !== id);
     setRepos(updatedRepos);
 
-    alert('O repositório foi removido com sucesso!')
   }
 
 
